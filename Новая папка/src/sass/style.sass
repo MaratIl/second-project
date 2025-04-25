@@ -1,0 +1,330 @@
+@import "normalize.scss"
+@import "reset.scss"
+
+*
+    box-sizing: border-box
+
+@font-face
+    font-family: MontserratT
+    src: url('../fonts/Montserrat-Regular.ttf')
+    font-style: normal
+    font-weight: regular
+@font-face
+    font-family: MontserratT
+    src: url('../fonts/Montserrat-SemiBold.ttf')
+    font-style: normal
+    font-weight: bold
+
+html
+    font-family: MontserratT
+    font-weight: regular
+
+$color-blue: #5290EA
+$color-orange: #F28B64
+$color-grey: #E2E2E2
+
+.container
+    max-width: 1140px
+    margin: 0 auto
+    position: relative
+
+/* Первая секция */
+.first-section
+    min-height: 800px
+    background: #F0F0F0
+    padding-top: 16px
+    position: relative
+    overflow: hidden
+    &__nav-container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        height: 69px
+    &__content-container
+        display: flex
+        flex-direction: row
+        position: relative
+    &__right-wrapper
+        width: 372px
+        position: absolute
+        z-index: 1
+        top: 150px
+        right: 76px
+    &__small-elipse
+        position: absolute
+        top: 129px
+        right: 80px
+    &__big-elipse
+        position: absolute
+        top: 650px
+        right: -120px
+
+/* Логотип+навигация */
+.logo
+    &__img
+        height: 69px
+.nav-menu
+    &__list
+        display: inline-flex
+    &__list-items
+        margin-right: 64px
+        font-size: 18px
+        font-weight: bold
+        &:last-child
+            margin-right: 0px
+        a
+            text-decoration: none
+            color: black
+            &:hover
+                color: $color-orange
+/* Контент-коробка */
+/* Левая сторона */
+.left-wrapper
+    position: relative
+    z-index: 0
+    &__picture
+        position: relative
+        z-index: 4
+    &__rectangles-blue
+        width: 565.95px
+        height: 220px
+        transform: rotate(-64deg)
+        border-radius: 150px
+        box-shadow: 0px 4px 4px rgb(0,0,0, 0.25)
+        background: $color-blue
+        position: absolute
+        z-index: 2
+        top: 150px
+        left: -50px
+    &__rectangles-orange
+        width: 618.43px
+        height: 220px
+        transform: rotate(-50.81deg)
+        border-radius: 150px
+        box-shadow: 0px 4px 4px rgb(0,0,0, 0.25)
+        background: $color-orange
+        position: absolute
+        z-index: 3
+        top: 160px
+        left: -30px
+    &__rectangles-grey
+        width: 608.97px
+        height: 220px
+        transform: rotate(-36.15deg)
+        border-radius: 150px
+        box-shadow: 0px 4px 4px rgb(0,0,0, 0.25)
+        background: $color-grey
+        position: absolute
+        z-index: 1
+        top: 190px
+        left: 10px
+/* Правая часть контента */
+.right-wrapper
+    width: 372px
+    position: absolute
+    top: 150px
+    right: 76px
+    z-index: 5
+    &__social-box
+        padding-left: 10px
+        margin-bottom: 2px
+    &__title
+        margin-bottom: 5px
+    &__text
+        font-size: 16px
+        margin-bottom: 20px
+
+/* Соц сети */
+.social-icons
+    display: inline-flex
+    &__items
+        border: 1px solid $color-blue
+        border-radius: 100px
+        width: 40px
+        height: 40px
+        display: flex
+        flex-direction: row
+        justify-content: center
+        align-items: center
+        margin-right: 17px
+        &:last-child
+            margin-right: 0
+        img
+            width: 21px
+            height: 21px
+/* Титульное наименование */
+.title
+    font-size: 72px
+    font-weight: bold
+    position: relative
+    &__hr
+        position: absolute
+        width: 94px
+        margin: 0
+        bottom: 0
+        border: none
+        border-top: 1px solid #000
+        border-radius: 100px
+        &_br
+            position: absolute
+            top: 70px
+            left: 6px
+/* Кнопки брони и контакта */
+.buttons
+    display: inline-flex
+    &__main-bt
+        width: 200px
+        height: 60px
+        background: $color-orange
+        border-radius: 100px
+        border: none
+        box-shadow: 0px 4px 4px rgb(0,0,0, 0.25)
+        color: white
+        font-size: 18px
+        font-weight: bold
+        margin-right: 32px
+    &__contact-bt
+        display: inline-flex
+        justify-content: center
+        align-items: center
+    &__icon
+        margin-right: 12px
+    &__text
+        font-size: 16px
+/* Круг */
+.elipse
+    width: 194px
+    height: 194px
+    background: linear-gradient(143.92deg, rgba(237, 123, 80, 0.5) 14.85%, rgba(72, 138, 234, 0.5) 53.25%, rgba(44, 44, 44, 0.5) 85.74%)
+    border-radius: 150px
+    display: flex
+    justify-content: center
+    align-items: center
+    &_big
+        width: 282px
+        height: 282px
+    &__subtract
+        width: 129.33px
+        height: 129.33px
+        background: #f0f0f0
+        border-radius: 150px
+        &_big
+            width: 188px
+            height: 188px
+
+/* Вторая секция */
+.second-section
+    min-height: 700px
+    &__container
+        padding-top: 32px
+        position: relative
+    &__title
+        margin-bottom: 40px
+    &__content-boxs
+        display: inline-flex
+        margin-bottom: 25px
+    &__content-box
+        margin-right: 30px
+        &:last-child
+            margin-right: 0
+    &__achievements
+        display: flex
+        justify-content: space-evenly
+    &__first-elipse
+        position: absolute
+        top: 80px
+        right: -60px
+        z-index: -1
+    &__second-elipse
+        position: absolute
+        top: 364px
+        left: -60px
+        z-index: -1
+        
+/* Виды гитар-инструментов */
+.content-box
+    position: relative
+    width: 360px
+    height: 360px
+    border-radius: 20px
+    display: flex
+    align-items: flex-end
+    &__img
+        height: 335px
+    &__text
+        width: 280px
+        text-align: center
+        font-size: 36px
+        font-weight: bold
+        transform: rotate(90deg)
+        position: absolute
+        top: 144px
+        right: -45px
+    &_grey
+        background: $color-grey
+    &_orange
+        background: $color-orange
+    &_blue
+        background: $color-blue
+    /* Достижения */
+.achievements-icon
+    display: inline-flex
+    align-items: center
+    &__img
+        margin-right: 20px
+        width: 80px
+    &__text
+        font-size: 18px
+    span
+        font-size: 48px
+        font-weight: bold
+/* Третья секция */
+.third-section
+    position: relative
+    min-height: 640px
+    background: #f0f0f0
+    overflow: hidden
+    z-index: 0
+    &__container
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        padding-left: 167px
+        padding-top: 46px
+    &__right-wrapper
+        width: 480px
+    &__right-title
+        margin-bottom: 20px
+    &__text
+        font-size: 18px
+        margin-bottom: 30px
+    /* Круги */
+    &__big-elipse
+        position: absolute
+        z-index: -1
+        top: 140px
+        left: 110px
+    &__img
+        position: absolute
+        top: 249px
+        left: 15px
+        z-index: -1
+    &__second-elipse
+        position: absolute
+        top: -120px
+        right: -120px
+/* footer */
+.footer
+    &__img
+        position: absolute
+        left: -250px
+        bottom: 0px
+    &__container
+        min-height: 272px
+        display: flex
+        align-items: center
+        justify-content: flex-end
+    &__title
+        margin-bottom: 20px
